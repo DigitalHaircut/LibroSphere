@@ -3,7 +3,7 @@ import { Navlink } from "react-router-dom";
 
 export default function () {
   return (
-    <Box>
+    <Box class="flexCenter">
       <Typography variant="h5"> Sign in </Typography>
       <Typography variant="body1">
         or{" "}
