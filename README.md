@@ -1,4 +1,4 @@
-# LibroSphere
+LibroSphere
 The online library
-https://libro-sphere.netlify.app/
-https://libro-sphere.vercel.app/
+NETLIFY https://libro-sphere.netlify.app/   
+VERCEL https://libro-sphere.vercel.app/
