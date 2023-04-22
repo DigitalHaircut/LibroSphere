@@ -17,24 +17,31 @@ export default function () {
         <Link component={NavLink} to="/">
           explore the app
         </Link>
-      </Typography>
+
+      </Typography>      
       <Box component="form" sx={{ mt: 2 }}>
+
         <TextField 
           {...registerField("email")} 
           label="Email" 
           fullWidth 
           margin="normal" 
+          type="email"
         />
+
         <TextField 
           {...registerField("Password")}
           label="Password" 
           fullWidth 
           margin="normal" 
+          type="password"
         />
 
-          <Button type="submit" variant="contained"> 
-            Sign in 
+        <Button type="submit" variant="contained"> 
+          Sign in 
         </Button>
+        <br/>
+      
         <Link component={NavLink} to="/register" c>
           Don't have an account? Sign up
         </Link>
