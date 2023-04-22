@@ -9,6 +9,11 @@ export default function () {
     password: "",
   })
 
+  function onSubmit(event){
+    console.log(formValues);
+
+  }
+
   return (
     <Box className="flexCenter" sx={{ mt: 12 }}>
       <Typography variant="h5"> Sign in </Typography>
@@ -19,7 +24,7 @@ export default function () {
         </Link>
 
       </Typography>      
-      <Box component="form" sx={{ mt: 2 }}>
+      <Box component="form" onSubmit={onSubmit} sx={{ mt: 2 }}>
 
         <TextField 
           {...registerField("email")} 
@@ -27,6 +32,7 @@ export default function () {
           fullWidth 
           margin="normal" 
           type="email"
+          required
         />
 
         <TextField 
@@ -35,6 +41,7 @@ export default function () {
           fullWidth 
           margin="normal" 
           type="password"
+          required
         />
 
         <Button type="submit" variant="contained"> 
