@@ -1,10 +1,16 @@
-
-import { Box, Typography, Link, TextField } from "@mui/material";
+import { Box, Typography, Link, TextField, Button } from "@mui/material";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useForm } from "../hooks/useForm";
 
-export default function SignIn() {
+export default function () {
+  const{ formValues, registerField } = useForm({
+    email: "",
+    password: "",
+  })
+
   return (
-    <Box className="flexCenter" sx={{ mt: 4 }}>
+    <Box className="flexCenter" sx={{ mt: 12 }}>
       <Typography variant="h5"> Sign in </Typography>
       <Typography variant="body1">
         or{" "}
@@ -13,9 +19,28 @@ export default function SignIn() {
         </Link>
       </Typography>
       <Box component="form" sx={{ mt: 2 }}>
-        <TextField label="Email" fullWidth margin="normal" />
-        <TextField label="Password" fullWidth margin="normal" />
+        <TextField 
+          {...registerField("email")} 
+          label="Email" 
+          fullWidth 
+          margin="normal" 
+        />
+        <TextField 
+          {...registerField("Password")}
+          label="Password" 
+          fullWidth 
+          margin="normal" 
+        />
+
+          <Button type="submit" variant="contained"> 
+            Sign in 
+        </Button>
+        <Link component={NavLink} to="/register" c>
+          Don't have an account? Sign up
+        </Link>
+
       </Box>
     </Box>
   );
 }
+

@@ -5,7 +5,7 @@ export default function () {
 return (
     <Box>
         <h1> In layout... </h1>
-        <Container>
+        <Container maxWidth="xs">
             <Outlet />
         </Container>
     </Box>
