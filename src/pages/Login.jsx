@@ -9,9 +9,12 @@ export default function () {
     password: "",
   })
 
-  function onSubmit(event){
+  function onSubmit(event) {
+    event.preventDefault();
+
     console.log(formValues);
 
+    login(formValues).then{() => }
   }
 
   return (
