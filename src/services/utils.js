@@ -1,6 +1,16 @@
 export const BASE_URL = 'https://itschool-library.onrender.com'
 
+export const headers = {
+    "Content-Type": "application/json"
+}
+
 export async function fetchAndParse(input, init) {
-    const response = await fetch(input, init)
-    return response.json()
+    const response = await fetch(input, init);
+    if(response.status >= 400){
+        throw {
+            status: response.status,
+            data: response.json()
+        }
+    }
+    return response.json();
 }
