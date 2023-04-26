@@ -39,7 +39,7 @@ export default function () {
         />
 
         <TextField 
-          {...registerField("Password")}
+          {...registerField("password")}
           label="Password" 
           fullWidth 
           margin="normal" 
@@ -47,12 +47,11 @@ export default function () {
           required
         />
 
-        <Button type="submit" variant="contained"> 
+        <Button sx={{ my: 2 }} type="submit" variant="contained" fullWidth> 
           Sign in 
         </Button>
-        <br/>
       
-        <Link component={NavLink} to="/register" c>
+        <Link component={NavLink} to="/register" variant="body1">
           Don't have an account? Sign up
         </Link>
 
