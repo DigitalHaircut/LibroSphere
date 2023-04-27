@@ -1,8 +1,11 @@
-import { Box, Typography, Link, TextField, Button } from "@mui/material";
+import { Box, Typography, Link, TextField, Button, Alert } from "@mui/material";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuthContext } from "../contexts/auth/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 import { useForm } from "../hooks/useForm";
 import { myBooks } from "../services/book";
+import { headers } from "../services/utils";
 
 export default function () {
   const { formValues, registerField } = useForm({
@@ -26,20 +29,14 @@ export default function () {
       console.log(error);
     });
 
-    login(formValues).then((serverResponse) => {
-      console.log(serverResponse);
-      const token = serverResponse.token;
-      headers.Authorization = 'Bearer ${token}';
-    })
-      .catch((error) => {
-        console.log("Error", error);
-        setServerError(error.data.message)
+    login(formValues).catch((error) => {
+      setServerError(error);
     });
   }
 
   return (
-    <Box className="flexCenter" sx={{ mt: 12 }}>
-      <Typography variant="h5"> Sign in </Typography>
+    <Box className="flexCenter" sx={{ mt: 11 }}>
+      <Typography variant="h4"> Sign in </Typography>
       
       <Typography variant="body1">
         or{" "}

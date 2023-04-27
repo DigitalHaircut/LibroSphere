@@ -4,6 +4,7 @@ import { myBooks } from "../services/book";
 
 export default function () {  
   const { user } = useAuthContext();
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -12,7 +13,9 @@ export default function () {
         : "Not Logged In"}
       <h1> Home page </h1>
       {user ?  
-      <button onClick={logout}>Logout</button> : <button>Login</button>}
+      <button onClick={logout}>Logout</button> : <button onClick={() => {
+        navigate("/login");
+      }}>Login</button>}
     </div>
   );
 }

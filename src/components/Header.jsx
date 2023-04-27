@@ -36,6 +36,10 @@ export function Header() {
     setAnchorElUser(null);
   };
 
+  "files.associations"; {
+    "*.js"; "typescript"
+  };
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
