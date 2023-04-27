@@ -8,6 +8,8 @@ import { myBooks } from "../services/book";
 import { headers } from "../services/utils";
 
 export default function () {
+  const { user, login } = useAuthContext();
+
   const { formValues, registerField } = useForm({
     email: "",
     password: "",
