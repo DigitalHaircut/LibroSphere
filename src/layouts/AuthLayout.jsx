@@ -6,6 +6,7 @@ export function AppLayout() {
 return (
     <Box>
         <Header />
+        <h5> LibroSphere </h5>
         <Container maxWidth="xs">
             <Outlet />
         </Container>
