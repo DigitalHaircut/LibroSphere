@@ -6,7 +6,9 @@ import * as Pages from "../pages";
 export default function () {
   return (
     <Routes>
-      <Route path="/" element={<Pages.Home />} />
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<Pages.Home />} />
+      </Route>
 
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Pages.Login />} />

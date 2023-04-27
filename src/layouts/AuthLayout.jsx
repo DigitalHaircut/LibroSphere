@@ -1,10 +1,11 @@
 import { Box, Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import { Header } from "../components/Header";
 
-export default function () {
+export function AppLayout() {
 return (
     <Box>
-        <h1> In layout... </h1>
+        <Header />
         <Container maxWidth="xs">
             <Outlet />
         </Container>
