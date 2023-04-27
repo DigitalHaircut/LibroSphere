@@ -12,7 +12,7 @@ export default function () {
         <Route path="/login" element={<Pages.Login />} />
         <Route path="/register" element={<Pages.Register />} />
       </Route>
-      
+
     </Routes>
   );
 }

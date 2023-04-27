@@ -1,5 +1,5 @@
 import { Box, Container } from "@mui/material";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "s";
 import { Header } from "../components/Header";
 
 export default function AuthLayout() {

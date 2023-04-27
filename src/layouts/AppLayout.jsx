@@ -9,7 +9,5 @@ export function AppLayout() {
                 <Outlet />
             </Container>
         </Box>
-      );
-    
-
+      );  
 }
